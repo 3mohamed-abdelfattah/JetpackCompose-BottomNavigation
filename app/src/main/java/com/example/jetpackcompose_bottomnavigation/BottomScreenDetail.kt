@@ -20,8 +20,8 @@ fun BottomHome() {
     ) {
         Text(
             text = "Home Screen",
-            style = MaterialTheme.typography.headlineMedium,
-            color = Color.White,
+            style = MaterialTheme.typography.headlineLarge,
+            color = Color.Black,
             fontWeight = FontWeight.Bold
         )
     }
@@ -39,8 +39,8 @@ fun BottomFavourite() {
     ) {
         Text(
             text = "Home Favourite",
-            style = MaterialTheme.typography.headlineMedium,
-            color = Color.White,
+            style = MaterialTheme.typography.headlineLarge,
+            color = Color.Black,
             fontWeight = FontWeight.Bold
         )
     }
@@ -58,8 +58,8 @@ fun BottomSearch() {
     ) {
         Text(
             text = "Home Search",
-            style = MaterialTheme.typography.headlineMedium,
-            color = Color.White,
+            style = MaterialTheme.typography.headlineLarge,
+            color = Color.Black,
             fontWeight = FontWeight.Bold
         )
     }
@@ -77,8 +77,8 @@ fun BottomUser() {
     ) {
         Text(
             text = "Home User",
-            style = MaterialTheme.typography.headlineMedium,
-            color = Color.White,
+            style = MaterialTheme.typography.headlineLarge,
+            color = Color.Black,
             fontWeight = FontWeight.Bold
         )
     }
@@ -96,8 +96,8 @@ fun BottomSetting() {
     ) {
         Text(
             text = "Home Setting",
-            style = MaterialTheme.typography.headlineMedium,
-            color = Color.White,
+            style = MaterialTheme.typography.headlineLarge,
+            color = Color.Black,
             fontWeight = FontWeight.Bold
         )
     }

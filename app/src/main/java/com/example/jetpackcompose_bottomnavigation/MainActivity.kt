@@ -75,13 +75,17 @@ fun AppBottomNavigation(navController: NavController, bottomNavigationItems: Lis
                 label = {
                     Text(text = screen.route)
                 },
-                selected = false, alwaysShowLabel = false, onClick = {
-                    when (screen.route) {
-                        "Home" -> navController.navigate(BottomScreen.Home.route)
-                        "Favourite" -> navController.navigate(BottomScreen.Favourite.route)
-                        "Search" -> navController.navigate(BottomScreen.Search.route)
-                        "User" -> navController.navigate(BottomScreen.User.route)
-                        "Setting" -> navController.navigate(BottomScreen.Setting.route)
+                selected = navController.currentDestination?.route == screen.route,
+                onClick = {
+                    navController.navigate(screen.route) {
+                        // Avoid multiple copies of the same destination when reselecting the same item
+                        popUpTo(navController.graph.startDestinationId) {
+                            saveState = true
+                        }
+                        // Avoid multiple copies of the same destination when reselecting the same item
+                        launchSingleTop = true
+                        // Restore state when reselecting a previously selected item
+                        restoreState = true
                     }
                 }
             )
